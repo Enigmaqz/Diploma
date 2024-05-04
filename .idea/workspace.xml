@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d7c5e2eb-519a-4610-9f72-b2c72258616d" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/init.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/api/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/api/httpClient.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/done-tick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/done.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/down-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/download.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/exit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/icons/up-arrow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/Navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/Notifications.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/elements/EButton.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/elements/ECheckbox.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/elements/EInput.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/components/elements/EUpload.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/router/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/shims-vue.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/stores/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/styles/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/utilities/helpers.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/views/Home.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/src/views/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/netology-diplom-frontend/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/screen.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/controller/StorageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/dto/AuthorizationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/dto/AuthorizationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/dto/FileListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/entity/File.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/exception/BadCredentialsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/exception/EmptyFileNameException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/exception/FileNotExistException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/exception/UnauthorizedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/exception/UploadFileException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/jwt/JWTFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/jwt/JWTUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/repository/AuthorizationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/repository/StorageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/service/AuthorizationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/service/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/netology/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/PostgresTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/repository/AuthorizationRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/repository/StorageRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/repository/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/service/StorageServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/WebConfig.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2fYaw9V6i5cCuYAdmYcN3bbYQlo" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.Unnamed.executor": "Run",
+    "Docker.docker-compose.yml.b_app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
+    "JUnit.AuthorizationRepositoryTest.executor": "Run",
+    "JUnit.AuthorizationRepositoryTest.getUserByToken.executor": "Run",
+    "JUnit.PostgresTest.executor": "Run",
+    "JUnit.StorageRepositoryTest.editFileNameByUser.executor": "Run",
+    "JUnit.StorageRepositoryTest.executor": "Run",
+    "JUnit.StorageRepositoryTest.findAllByUser.executor": "Run",
+    "JUnit.StorageRepositoryTest.findByUserAndFilename.executor": "Run",
+    "JUnit.StorageRepositoryTest.removeByUserAndFilename.executor": "Run",
+    "JUnit.StorageServiceTest.downloadFile.executor": "Run",
+    "JUnit.StorageServiceTest.executor": "Run",
+    "JUnit.StorageServiceTest.getFile.executor": "Run",
+    "JUnit.StorageServiceTest.uploadFile.executor": "Run",
+    "JUnit.UserRepositoryTest.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.getUserByToken.executor": "Run",
+    "JUnit.UserServiceTest.loadUserByUsername.executor": "Run",
+    "Maven.Diploma [clean].executor": "Run",
+    "Maven.Diploma [package].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="PostgresTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diploma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.PostgresTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StorageServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diploma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.service.StorageServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StorageServiceTest.downloadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diploma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.service.StorageServiceTest" />
+      <option name="METHOD_NAME" value="downloadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StorageServiceTest.getFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diploma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.service.StorageServiceTest" />
+      <option name="METHOD_NAME" value="getFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StorageServiceTest.uploadFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diploma" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.service" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.service.StorageServiceTest" />
+      <option name="METHOD_NAME" value="uploadFile" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-image" temporary="true">
+      <deployment type="docker-image">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PostgresTest" />
+        <item itemvalue="JUnit.StorageServiceTest" />
+        <item itemvalue="JUnit.StorageServiceTest.downloadFile" />
+        <item itemvalue="JUnit.StorageServiceTest.getFile" />
+        <item itemvalue="JUnit.StorageServiceTest.uploadFile" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-corretto-17.0.10-3183f394aec4-96c0d24d" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d7c5e2eb-519a-4610-9f72-b2c72258616d" name="Changes" comment="" />
+      <created>1713980705255</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713980705255</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1713984580835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1713984580835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1713984597655</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713984597655</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/netology/service/StorageService.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java</url>
+          <line>29</line>
+          <properties class="ru.netology.controller.AuthorizationController" method="logout">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Diploma$Main.ic" NAME="Main Coverage Results" MODIFIED="1714671220255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ru.netology.*</FILTER>
+    </SUITE>
+  </component>
+</project>
