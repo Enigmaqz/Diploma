@@ -37,4 +37,4 @@ Login: `qwerty@gmail.com`, password: `qwerty`
 
 ## Работа приложения
 
-<video src="screen.mp4" width="640" height="480" controls></video>
+<video src="/screen.mp4" width="640" height="480" controls></video>
