@@ -42,21 +42,19 @@ public class StorageServiceTest {
 
         File testFile = new File(TEST_FILENAME, TEST_MULTIPART_FILE.getSize(), TEST_MULTIPART_FILE.getBytes(), TEST_USER);
 
-        Mockito.when(userService.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USER);
+        //Mockito.when(userService.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USER);
         Mockito.when(storageRepository.save(testFile)).thenReturn(testFile);
 
-        assertDoesNotThrow(() -> storageService.uploadFile(TEST_TOKEN, TEST_FILENAME, TEST_MULTIPART_FILE));
+        assertDoesNotThrow(() -> storageService.uploadFile(TEST_USER, TEST_FILENAME, TEST_MULTIPART_FILE));
 
     }
 
     @Test
     void getFile() throws IOException {
         File testFile = new File(TEST_FILENAME, TEST_MULTIPART_FILE.getSize(), TEST_MULTIPART_FILE.getBytes(), TEST_USER);
-
-        Mockito.when(userService.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USER);
         Mockito.when(storageRepository.findByUserAndFilename(TEST_USER, TEST_FILENAME)).thenReturn(testFile);
 
-        assertEquals(testFile, storageService.getFile(TEST_TOKEN, TEST_FILENAME));
+        assertEquals(testFile, storageService.getFile(TEST_USER, TEST_FILENAME));
 
     }
 
@@ -64,10 +62,10 @@ public class StorageServiceTest {
     void downloadFile() throws IOException {
         File testFile = new File(TEST_FILENAME, TEST_MULTIPART_FILE.getSize(), TEST_MULTIPART_FILE.getBytes(), TEST_USER);
 
-        Mockito.when(userService.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USER);
+
         Mockito.when(storageRepository.findByUserAndFilename(TEST_USER, TEST_FILENAME)).thenReturn(testFile);
 
-        assertEquals(testFile.getContent(), storageService.downloadFile(TEST_TOKEN, TEST_FILENAME));
+        assertEquals(testFile.getContent(), storageService.downloadFile(TEST_USER, TEST_FILENAME));
 
     }
 }

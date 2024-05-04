@@ -46,11 +46,17 @@ public class AuthorizationService {
         if (authToken.startsWith("Bearer ")) {
             authToken = authToken.substring(7);
         }
-        final String username = authorizationRepository.getUserByToken(authToken);
+        final String username = authorizationRepository.getUsernameByToken(authToken);
         log.info("{} logout", username);
         authorizationRepository.removeUserByToken(authToken);
 
     }
 
-
+    public String getUsernameByToken(String authToken) throws RuntimeException {
+        if (authToken.startsWith("Bearer ")) {
+            authToken = authToken.substring(7);
+        }
+        String userName = authorizationRepository.getUsernameByToken(authToken);
+        return userName;
+    }
 }

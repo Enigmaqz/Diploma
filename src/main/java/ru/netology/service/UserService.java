@@ -39,11 +39,7 @@ public class UserService implements UserDetailsService {
                 .build();
     }
 
-    public User getUserByToken(String authToken) throws RuntimeException {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        String userName = authorizationRepository.getUserByToken(authToken);
+    public User getUserByUsername(String userName) throws RuntimeException {
         User user = userRepository.findUserByLogin(userName);
         if (user == null) {
             log.error("Unauthorized Exception error");

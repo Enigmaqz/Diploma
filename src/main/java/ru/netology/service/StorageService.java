@@ -29,11 +29,7 @@ public class StorageService {
     private final UserService userService;
     private final AuthorizationService authorizationService;
 
-    public void uploadFile(String authToken, String filename, MultipartFile multipartFile) throws IOException {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        User user = userService.getUserByToken(authToken);
+    public void uploadFile(User user, String filename, MultipartFile multipartFile) throws IOException {
         try {
             File uploadFile = new File(filename, multipartFile.getSize(), multipartFile.getBytes(), user);
             storageRepository.save(uploadFile);
@@ -46,11 +42,7 @@ public class StorageService {
     }
 
 
-    public File getFile(String authToken, String filename) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        User user = userService.getUserByToken(authToken);
+    public File getFile(User user, String filename) {
         File file = storageRepository.findByUserAndFilename(user, filename);
         if (file == null) {
             log.error("Search File error");
@@ -59,33 +51,20 @@ public class StorageService {
         return file;
     }
 
-    public byte[] downloadFile(String authToken, String filename) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        File file = getFile(authToken, filename);
+    public byte[] downloadFile(User user, String filename) {
+        File file = getFile(user, filename);
         byte[] fileContent = file.getContent();
         log.info("Downloaded file {}", file.getFilename());
         return fileContent;
     }
 
-    public void deleteFile(String authToken, String filename) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        File file = getFile(authToken, filename);
-        //storageRepository.delete(file);
-        User user = userService.getUserByToken(authToken);
+    public void deleteFile(User user, String filename) {
         storageRepository.removeByUserAndFilename(user, filename);
-        log.info("Deleted file {}", file.getFilename());
+        log.info("Deleted file {}", filename);
     }
 
-    public void editFileName(String authToken, String filename, String newFileName) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        User user = userService.getUserByToken(authToken);
-        File file = getFile(authToken, filename);
+    public void editFileName(User user, String filename, String newFileName) {
+        File file = getFile(user, filename);
         if (newFileName != null) {
             storageRepository.editFileNameByUser(user, filename, newFileName);
             log.info("User {} edit file {}. New filename {}", user.getLogin(), filename, newFileName);
@@ -94,11 +73,7 @@ public class StorageService {
         }
     }
 
-    public List<FileListResponse> getFiles(String authToken, Integer limit) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
-        User user = userService.getUserByToken(authToken);
+    public List<FileListResponse> getFiles(User user, Integer limit) {
         List<File> fileList = storageRepository.findAllByUser(user);
         log.info("User {} responsed all files", user.getLogin());
         return fileList.stream().map(f -> new FileListResponse(f.getFilename(), f.getSize()))

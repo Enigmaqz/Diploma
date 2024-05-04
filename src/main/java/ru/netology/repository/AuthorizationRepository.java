@@ -14,7 +14,7 @@ public class AuthorizationRepository {
         tokenAndUserName.put(token, username);
     }
 
-    public String getUserByToken(String token) {
+    public String getUsernameByToken(String token) {
         return tokenAndUserName.get(token);
     }
 

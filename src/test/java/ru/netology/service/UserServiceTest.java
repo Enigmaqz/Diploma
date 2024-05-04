@@ -41,7 +41,7 @@ public class UserServiceTest {
     @BeforeEach
     void setUp() {
         Mockito.when(userRepository.findUserByLogin(TEST_USERNAME)).thenReturn(TEST_USER);
-        Mockito.when(authorizationRepository.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USERNAME);
+        Mockito.when(authorizationRepository.getUsernameByToken(TEST_TOKEN)).thenReturn(TEST_USERNAME);
     }
 
     @Test
@@ -51,13 +51,8 @@ public class UserServiceTest {
     }
 
     @Test
-    void getUserByToken() {
-        assertEquals(TEST_USER, testUserService.getUserByToken(TEST_TOKEN));
+    void getUserByUsername() {
+        assertEquals(TEST_USER, testUserService.getUserByUsername(TEST_USERNAME));
     }
 
-    @Test
-    void getUserByTokenException() {
-        assertThrows(UnauthorizedException.class,
-                () -> testUserService.getUserByToken(NOT_VALID_TOKEN));
-    }
 }

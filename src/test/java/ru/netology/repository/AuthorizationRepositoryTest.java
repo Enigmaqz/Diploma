@@ -3,7 +3,6 @@ package ru.netology.repository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,17 +25,17 @@ public class AuthorizationRepositoryTest {
     @Test
     void getUserByToken() {
         testAuthorizationRepository.putToken(AUTH_TOKEN_1, AUTH_USERNAME_1);
-        assertEquals(AUTH_USERNAME_1, testAuthorizationRepository.getUserByToken(AUTH_TOKEN_1));
-        assertNull(testAuthorizationRepository.getUserByToken(AUTH_TOKEN_2));
+        assertEquals(AUTH_USERNAME_1, testAuthorizationRepository.getUsernameByToken(AUTH_TOKEN_1));
+        assertNull(testAuthorizationRepository.getUsernameByToken(AUTH_TOKEN_2));
     }
 
     @Test
     void deleteAuthUserByToken() {
-        assertNotNull(testAuthorizationRepository.getUserByToken(AUTH_TOKEN_1));
+        assertNotNull(testAuthorizationRepository.getUsernameByToken(AUTH_TOKEN_1));
 
         testAuthorizationRepository.removeUserByToken(AUTH_TOKEN_1);
 
-        assertNull(testAuthorizationRepository.getUserByToken(AUTH_TOKEN_1));
+        assertNull(testAuthorizationRepository.getUsernameByToken(AUTH_TOKEN_1));
     }
 }
 
