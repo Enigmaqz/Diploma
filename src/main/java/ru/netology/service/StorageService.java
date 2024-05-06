@@ -29,16 +29,9 @@ public class StorageService {
     private final UserService userService;
     private final AuthorizationService authorizationService;
 
-    public void uploadFile(User user, String filename, MultipartFile multipartFile) throws IOException {
-        try {
-            File uploadFile = new File(filename, multipartFile.getSize(), multipartFile.getBytes(), user);
+    public void uploadFile(File uploadFile) {
             storageRepository.save(uploadFile);
             log.info("uploadFile: {} ", uploadFile.getFilename());
-        } catch (IOException e) {
-            log.error("Upload File error");
-            throw new UploadFileException();
-
-        }
     }
 
 
@@ -51,11 +44,10 @@ public class StorageService {
         return file;
     }
 
-    public byte[] downloadFile(User user, String filename) {
+    public File downloadFile(User user, String filename) {
         File file = getFile(user, filename);
-        byte[] fileContent = file.getContent();
         log.info("Downloaded file {}", file.getFilename());
-        return fileContent;
+        return file;
     }
 
     public void deleteFile(User user, String filename) {

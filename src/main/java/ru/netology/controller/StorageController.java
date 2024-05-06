@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import ru.netology.dto.FileListResponse;
+import ru.netology.entity.File;
 import ru.netology.entity.User;
 import ru.netology.service.AuthorizationService;
 import ru.netology.service.StorageService;
@@ -26,22 +27,21 @@ public class StorageController {
     @PostMapping("/file")
     public ResponseEntity<?> uploadFile(@RequestHeader("auth-token") String authToken,
                                         @RequestParam("filename") String filename,
-                                        MultipartFile file) throws IOException {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
+                                        MultipartFile multipartFile) throws IOException {
+
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
-        storageService.uploadFile(user, filename, file);
+
+        File uploadFile = new File(filename, multipartFile.getSize(), multipartFile.getBytes(), user);
+
+        storageService.uploadFile(uploadFile);
         return new ResponseEntity<>("Success upload", HttpStatus.OK);
     }
 
     @DeleteMapping("/file")
     public ResponseEntity<?> deleteFile(@RequestHeader("auth-token") String authToken,
                                         @RequestParam("filename") String filename) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
+
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
         storageService.deleteFile(user, filename);
@@ -51,12 +51,10 @@ public class StorageController {
     @GetMapping("/file")
     public ResponseEntity<?> downloadFile(@RequestHeader("auth-token") String authToken,
                                           @RequestParam("filename") String filename) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
+
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
-        byte[] file = storageService.downloadFile(user, filename);
+        byte[] file = storageService.downloadFile(user, filename).getContent();
         return new ResponseEntity<>(file, HttpStatus.OK);
     }
 
@@ -64,9 +62,7 @@ public class StorageController {
     public ResponseEntity<?> editFileName(@RequestHeader("auth-token") String authToken,
                                           @RequestParam("filename") String filename,
                                           @RequestBody Map<String, String> fileNameRequest) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
+
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
         storageService.editFileName(user, filename, fileNameRequest.get("filename"));
@@ -76,9 +72,7 @@ public class StorageController {
     @GetMapping("/list")
     public ResponseEntity<?> getAllFiles(@RequestHeader("auth-token") String authToken,
                                          @RequestParam("limit") Integer limit) {
-        if (authToken.startsWith("Bearer ")) {
-            authToken = authToken.substring(7);
-        }
+
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
         List<FileListResponse> rp = storageService.getFiles(user, limit);

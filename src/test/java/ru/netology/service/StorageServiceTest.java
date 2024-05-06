@@ -45,7 +45,7 @@ public class StorageServiceTest {
         //Mockito.when(userService.getUserByToken(TEST_TOKEN)).thenReturn(TEST_USER);
         Mockito.when(storageRepository.save(testFile)).thenReturn(testFile);
 
-        assertDoesNotThrow(() -> storageService.uploadFile(TEST_USER, TEST_FILENAME, TEST_MULTIPART_FILE));
+        assertDoesNotThrow(() -> storageService.uploadFile(testFile));
 
     }
 
@@ -65,7 +65,7 @@ public class StorageServiceTest {
 
         Mockito.when(storageRepository.findByUserAndFilename(TEST_USER, TEST_FILENAME)).thenReturn(testFile);
 
-        assertEquals(testFile.getContent(), storageService.downloadFile(TEST_USER, TEST_FILENAME));
+        assertEquals(testFile, storageService.downloadFile(TEST_USER, TEST_FILENAME));
 
     }
 }
