@@ -5,18 +5,13 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
-import ru.netology.dto.FileListResponse;
 import ru.netology.entity.File;
 import ru.netology.entity.User;
 import ru.netology.exception.EmptyFileNameException;
 import ru.netology.exception.FileNotExistException;
-import ru.netology.exception.UploadFileException;
 import ru.netology.repository.StorageRepository;
 
-import java.io.IOException;
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 @Slf4j
@@ -30,8 +25,8 @@ public class StorageService {
     private final AuthorizationService authorizationService;
 
     public void uploadFile(File uploadFile) {
-            storageRepository.save(uploadFile);
-            log.info("uploadFile: {} ", uploadFile.getFilename());
+        storageRepository.save(uploadFile);
+        log.info("uploadFile: {} ", uploadFile.getFilename());
     }
 
 
@@ -65,12 +60,9 @@ public class StorageService {
         }
     }
 
-    public List<FileListResponse> getFiles(User user, Integer limit) {
-        List<File> fileList = storageRepository.findAllByUser(user);
+    public List<File> getFiles(User user, Integer limit) {
         log.info("User {} responsed all files", user.getLogin());
-        return fileList.stream().map(f -> new FileListResponse(f.getFilename(), f.getSize()))
-                .limit(limit)
-                .collect(Collectors.toList());
+        return storageRepository.findAllByUser(user);
     }
 
 

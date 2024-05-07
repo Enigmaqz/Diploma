@@ -15,6 +15,7 @@ import ru.netology.service.UserService;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @RestController
 @AllArgsConstructor
@@ -75,7 +76,10 @@ public class StorageController {
 
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
-        List<FileListResponse> rp = storageService.getFiles(user, limit);
+        List<File> fileList = storageService.getFiles(user, limit);
+        List<FileListResponse> rp = fileList.stream().map(f -> new FileListResponse(f.getFilename(), f.getSize()))
+                .limit(limit)
+                .collect(Collectors.toList());
         return new ResponseEntity<>(rp, HttpStatus.OK);
     }
 }

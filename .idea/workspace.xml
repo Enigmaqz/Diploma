@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7c5e2eb-519a-4610-9f72-b2c72258616d" name="Changes" comment="Changes #1">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/controller/AuthorizationController.java" afterDir="false" />
+    <list default="true" id="d7c5e2eb-519a-4610-9f72-b2c72258616d" name="Changes" comment="Changes #2">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/controller/StorageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/controller/StorageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/service/StorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/service/StorageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/service/StorageServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/service/StorageServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714827998969</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Changes #2">
+      <option name="closed" value="true" />
+      <created>1715004155242</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715004155242</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -248,7 +253,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Changes #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes #1" />
+    <MESSAGE value="Changes #2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes #2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Diploma$Main.ic" NAME="Main Coverage Results" MODIFIED="1714671220255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
