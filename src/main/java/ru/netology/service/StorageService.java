@@ -60,7 +60,7 @@ public class StorageService {
         }
     }
 
-    public List<File> getFiles(User user, Integer limit) {
+    public List<File> getFiles(User user) {
         log.info("User {} responsed all files", user.getLogin());
         return storageRepository.findAllByUser(user);
     }

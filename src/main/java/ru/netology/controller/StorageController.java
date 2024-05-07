@@ -76,7 +76,7 @@ public class StorageController {
 
         String userName = authorizationService.getUsernameByToken(authToken);
         User user = userService.getUserByUsername(userName);
-        List<File> fileList = storageService.getFiles(user, limit);
+        List<File> fileList = storageService.getFiles(user);
         List<FileListResponse> rp = fileList.stream().map(f -> new FileListResponse(f.getFilename(), f.getSize()))
                 .limit(limit)
                 .collect(Collectors.toList());
